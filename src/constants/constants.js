@@ -8,21 +8,26 @@ import {
   html,
   css,
   reactjs,
-  redux,
+  vue,
   tailwind,
   nodejs,
   mongodb,
   git,
   figma,
   docker,
-  meta,
+  raptor,
   starbucks,
   tesla,
+  ali,
+  goucui,
+  yundao,
   shopify,
   carrent,
   jobit,
-  tripguide,
-  threejs,
+  feicui,
+  spotPrice,
+  raptorPlatform,
+  mysql,
 } from "../assets";
 
 export const navLinks = [
@@ -46,7 +51,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "UniApp Developer",
     icon: mobile,
   },
   {
@@ -77,12 +82,12 @@ const technologies = [
     icon: typescript,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: "Vue JS",
+    icon: vue,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "React JS",
+    icon: reactjs,
   },
   {
     name: "Tailwind CSS",
@@ -93,12 +98,8 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
+    name: "MySql",
+    icon: mysql,
   },
   {
     name: "git",
@@ -116,55 +117,56 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Full-stack Developer",
+    company_name: "Allegis-BN",
+    icon: ali,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Mar 2024 - May 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Contributed to front-end features in RReaacctt, including real-time exchange rate display, enhancing the user experience.",
+      "Implemented API endpoints in Nodde..js (Express) to retrieve and aggregate data from multiple microservices for front-end use.",
+      "Maintained accurate API responses by identifying and resolving data inconsistencies in Java (Spring Boot).",
+      "Wrote unit tests using Jest (React/Node.js) and JUnit (Java) to maintain code quality.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Frontend Developer",
+    company_name: "Lida",
+    icon: raptor,
+    iconBg: "#4866af",
+    date: "Aug 2020 - Jul 2023",
+    points: [
+      "Led development from client meetings to successful deployment of customized solutions, improving customer satisfaction by 15% by using unit tests to ensure code quality.",
+      "Enhanced platform speed and scalability, resulting in a 20% reduction in loading times and improved code maintainability through code optimization, Vue3.js upgrade, and the use of TypeScript and Hooks.",
+      "Utilized JSON configuration for automated form generation,  and real-time updates, streamlining development and enhancing developing efficiency by 25%.",
+      "Utilized React.js and Redux to create a successful diamond shopping mall project, meeting the expectations of our largest new client.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "Goucui Technology Co., Ltd",
+    icon: goucui,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Jan 2019 - Aug 2020",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Making a responsive e-commerce shopping mini app,  resulting in a 10% user increase, by implementing modules like live streaming, WebSocket message, product purchase, poster drawing and sharing,  etc.",
+      "Led a 4-member front-end team and provided guidance in problem-solving.",
+      "Implemented and maintained a website with server-side rendering for improved 50% SEO performance.",
+      "Leveraged Node.js and  PM2 to build middleware service, improving agility and data security.",
+      "Worked with the app development team to create embedded HTML5 activity pages, with animation or lottery games, improving customer engagement and contributing a 15% increase to revenue growth.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Junior Software developer",
+    company_name: "Yundao Information Technology Co., Ltd",
+    icon: yundao,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Aug 2017 - Dec 2018",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Participated in MySQL database form design and Java-based API interface development.",
+      "Introduced and popularized a unit testing template, leading to a 40% reduction in software defects and a significant increase in work efficiency.",
+      "Utilized technologies such as jQuery, JSP, and Bootstrap to integrate with back-end services, resulting in real-time data-driven updates to the website and an improved user experience.",
+      "Consistently delivered tasks on time and with high quality, earning the 'Outstanding Employee' title twice.",
     ],
   },
 ];
@@ -198,66 +200,74 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Spot Price",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Built with a microservices architecture, the platform designed to display real-time exchange rates and used by internal agents to place currency exchange orders.",
+    tags: [
+      {
+        name: "Java",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "microservices",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: spotPrice,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Real Estate CRM",
+    description:
+      "Property Raptor is a real estate CRM platform that allows agents to manage listings and customer relationships, automate sales, run marketing campaigns,and analyze data with visual dashboards.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "vue",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "salesforce",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: raptorPlatform,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Jewelry E-commerce",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A comprehensive trading platform with live-stream shopping room where hosts showcase jade jewelry in real time, customers place orders instantly, and in-app chat provides fast, personalized support.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "vue",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "scss",
         color: "pink-text-gradient",
       },
+      {
+        name: "webpack",
+        color: "blue-text-gradient",
+      },
     ],
-    image: tripguide,
+    image: feicui,
     source_code_link: "https://github.com/",
   },
 ];

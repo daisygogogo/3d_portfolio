@@ -16,4 +16,4 @@ const Tech = () => {
   );
 };
 
-export default SectionWrapper(Tech, "");
+export default SectionWrapper(Tech, "", "bg-[linear-gradient(135deg,rgba(74,144,226,0.08),rgba(80,227,194,0.08))]");

@@ -3,7 +3,8 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -16,9 +17,11 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: "rgb(44, 62, 80)",
         color: "#fff",
+
       }}
+
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
@@ -27,7 +30,7 @@ const ExperienceCard = ({ experience }) => {
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain"
+            className="w-[50%] h-[50%] object-contain"
           />
         </div>
       }
@@ -35,7 +38,7 @@ const ExperienceCard = ({ experience }) => {
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
         <p
-          className="text-secondary text-[16px] font-semibold"
+          className="text-tertiary/80 text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -57,9 +60,17 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        ref={ref}
+        variants={textVariant()}
+        initial="hidden"
+        animate={isInView ? "show" : "hidden"}
+      >
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
@@ -69,7 +80,7 @@ const Experience = () => {
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        <VerticalTimeline lineColor={"linear-gradient(to bottom, #ff6b9d, #ffffff, #ff6b9d)"}>
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
@@ -82,4 +93,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, "work", "bg-white/5");
