@@ -113,7 +113,7 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What you want to say?"
+              placeholder="Please input your message."
               className="bg-white py-4 px-6 placeholder:text-gray text-black rounded-lg outline-none border-2 border-tertiary font-medium"
             />
           </label>
